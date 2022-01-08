@@ -5,13 +5,14 @@
   tasks:
           - name: copy artifacts .war
             copy:
-                    src: ./target/*.war
+                    src: ./target/account-1.0-SNAPSHOT.war
                     dest: /opt/tomcat/webapps
             notify: restart_tomcat
 
   handlers:
            - name: restart_tomcat
-             command: sh /opt/tomcat/bin/shutdown.sh
-             command: sh /opt/tomcat/bin/startup.sh
+             service:
+                     name: tomcat
+                     state: restart
 
 ...
