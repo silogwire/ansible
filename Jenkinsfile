@@ -4,7 +4,7 @@ pipeline {
    	stages {
         	stage('Clone') {
 			steps {
-              			git 'https://github.com/silogwire/Tp_Docker.git'
+              			git 'https://github.com/silogwire/ansible.git'
        			 }
 		}	
 		stage('Build') {
