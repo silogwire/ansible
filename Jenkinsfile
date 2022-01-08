@@ -27,12 +27,12 @@ pipeline {
                           }
                 }
 
-	 //       stage('ansible') {
-           //     steps {
+	       stage('ansible') {
+               steps {
 
-             //            sh 'ansible-playbook playbook.yml'
-               //  }
+                        sh 'ansible-playbook playbook.yml'
+                 }
 
-		//}
+		}
 }
 }
